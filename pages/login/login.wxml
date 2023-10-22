@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<view>
+  <view>
+    <span>用户名： </span><input type="text" bindinput='bindUsername' placeholder="请输入用户名"/>
+  </view>
+  <view>
+    <span>密码: </span><input type="text" bindinput="bindPasswd" placeholder="请输入密码"/>
+  </view>
+</view>
+<view>
+  <button bindtap="login">login</button>
+  <button bindtap="register">register</button>
+</view>

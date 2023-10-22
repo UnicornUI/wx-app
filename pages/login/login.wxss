@@ -1,0 +1,8 @@
+/* pages/login/login.wxss */
+
+
+
+
+input {
+  border: 1px solid black;
+}

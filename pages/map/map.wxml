@@ -1,0 +1,73 @@
+<!--pages/map/map.wxml-->
+<view class="view">
+  <!-- 地图视图 -->
+  <map id="myMap" style="height: 1400rpx; width: 100%;"
+    markers="{{markers}}"
+    polyline="{{polyline}}"
+    enable-scroll="{{scroll}}"
+    include-points="{{points}}"
+    covers="{{covers}}"
+    show-location>
+  </map>
+  <view class="miltiFun" style="top:{{viewTop}}rpx;"
+    bindtouchstart="funTouchStart"
+    bindtouchmove="funTouchMove"
+    bindtouchend="funTouchEnd">
+    <view class="searchbox">
+      <!-- 搜索框上的顶部线条 -->
+      <view class="line"></view>
+      <view class="search">
+        <input type="text" style="width: 680rpx; height: 84rpx;display:block; box-sizing: border-box;left: 0rpx; " class="searchinput"
+          maxlength="15"
+          placeholder=" 查找地名，景观，建筑"
+          bindinput="placeInput"
+          bindconfirm="onSearch" />
+        <image class="searchicon"
+          style="width: 50rpx; height: 50rpx; float: right;"
+          src="/resources/images/mapPage/search.png"
+          mode="aspectFill"
+          bindtap="onSearch">
+        </image>
+      </view>
+      <!-- 图标栏 -->
+      <view class="AI">
+        <image class="typeicon" src="/resources/images/mapPage/sleaves.png" bindtap="gotoHuacao"></image>
+        <image class="typeicon" src="/resources/images/mapPage/tree.png" bindtap="gotoShumu"></image>
+        <image class="typeicon" src="/resources/images/mapPage/swallow.png" bindtap="gotoDongwu"></image>
+        <image class="typeicon" src="/resources/images/mapPage/market.png" bindtap="gotoGoods" ></image>
+        <image class="typeicon" src="/resources/images/mapPage/headset.png" bindtap="gotoGuide"></image>
+      </view>
+      <!-- 文字栏 -->
+      <view class="AItext">
+        <view class="mytext">
+          <text>花草</text>
+        </view>
+        <view class="mytext">
+          <text>树木</text>
+        </view>
+        <view class="mytext">
+          <text>建筑</text>
+        </view>
+        <view class="mytext">
+          <text>商品</text>
+        </view>
+        <view class="mytext">
+          <text>导游</text>
+        </view>  
+      </view>
+      <!-- 分割线 -->
+      <view class="divideline"></view>
+      <!-- 工具栏 -->
+      <view class="tools">
+        <view class="icon2">
+          <image class="toolicon" src="/resources/images/mapPage/headset.png"></image>
+          <text>语音助手</text>
+        </view>
+        <navigator class="icon2" url="../road/road">
+          <image class="toolicon" src="/resources/images/mapPage/roadpath.png"></image>
+          <text>路径规划</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

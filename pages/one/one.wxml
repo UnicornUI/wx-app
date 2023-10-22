@@ -1,0 +1,3 @@
+<!--pages/one/one.wxml-->
+<text>pages/one/one.wxml</text>
+<text>{{content.data}}</text>
